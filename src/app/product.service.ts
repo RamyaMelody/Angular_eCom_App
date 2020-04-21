@@ -39,6 +39,6 @@ export class ProductService {
   return this.prodList;
   }
   category(data){
-    return this.http.get('http://localhost:3000/viewcategory/'+data)
+    return this.http.get('https://node-api-ecom.herokuapp.com/viewcategory/'+data)
   }
 }
