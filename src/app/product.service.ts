@@ -12,22 +12,22 @@ export class ProductService {
 
   /* Insert the data using nodeapi */
   postProduct(data):Observable<any>{
-    return this.http.post(`http://localhost:3000/category`,data)
+    return this.http.post(`https://node-api-ecom.herokuapp.com/category`,data)
 
   }
   /* Display the data using nodeapi */
   listProduct():Observable<any>{
-    return this.http.get(`http://localhost:3000/view`)
+    return this.http.get(`https://node-api-ecom.herokuapp.com/view`)
 
   }
   /* Delete the data using nodeapi */
   deleteProduct(id):Observable<any>{
-    return this.http.delete(`http://localhost:3000/delete/`+id)
+    return this.http.delete(`https://node-api-ecom.herokuapp.com/delete/`+id)
 
   }
   /* Update the data using nodeapi */
   updateProduct(data):Observable<any>{
-    return this.http.put(`http://localhost:3000/update/`+data.prod_id,data)
+    return this.http.put(`https://node-api-ecom.herokuapp.com/update/`+data.prod_id,data)
   }
   
   setItems(data){
