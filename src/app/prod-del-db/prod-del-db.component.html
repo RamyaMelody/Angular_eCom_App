@@ -1,0 +1,16 @@
+<div class="container">
+    <br><br><br>
+    <form class="form-group" [formGroup]="delForm" (submit)="delData()">
+        <div class="row">
+            <div class="form-group col-lg-3">
+                <label for="">Product id</label>
+                <input type="text" class="form-control" formControlName="prod_id">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">                
+                <input class="btn btn-primary" [disabled]=!delForm.valid type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>
