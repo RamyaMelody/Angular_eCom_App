@@ -13,7 +13,7 @@ export class ProdListDynamicComponent implements OnInit {
   constructor(private productservice: ProductService) { }
 
   ngOnInit(): void {
-    console.log(this.productList)
+    //console.log(this.productList)
   }
 
   setItems() {
