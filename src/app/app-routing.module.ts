@@ -11,6 +11,8 @@ import { ProdDelDBComponent } from './prod-del-db/prod-del-db.component';
 import { ProdUpdateDbComponent } from './prod-update-db/prod-update-db.component';
 import { ProdList1Component } from './prod-list1/prod-list1.component';
 import { ProdList2Component } from './prod-list2/prod-list2.component';
+import { RegisterComponent } from './register/register.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 const routes: Routes = [
@@ -70,6 +72,14 @@ const routes: Routes = [
   {
     path: 'product/update',
     component: ProdUpdateDbComponent
+  },
+  {
+    path:'register',
+    component:RegisterComponent
+  },
+  {
+    path:'login',
+    component:UserLoginComponent
   }
 
 ];

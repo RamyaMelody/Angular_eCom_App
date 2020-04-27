@@ -30,6 +30,15 @@ export class ProductService {
     return this.http.put(`https://node-api-ecom.herokuapp.com/update/`+data.prod_id,data)
   }
   
+  /* Register the users data using nodeapi */
+  regDataPost(data):Observable<any>{
+    return this.http.post(`https://node-api-ecom.herokuapp.com/register`,data)
+
+  }
+  loginPost(data):Observable<any>{
+    return this.http.post(`https://node-api-ecom.herokuapp.com/login`,data)
+
+  }
   setItems(data){
     this.prodList=data;
   }

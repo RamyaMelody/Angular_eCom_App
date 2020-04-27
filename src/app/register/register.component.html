@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Register Account</h4><br>
+            <form [formGroup]="regForm" (submit)="regData()">
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input class="form-control" placeholder="Full name" type="text" formControlName="name">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input class="form-control" placeholder="Email address" type="email" formControlName="email">
+                </div> <!-- form-group// -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                    </div>
+                    <select class="custom-select" style="max-width: 120px;">
+                        <option selected="">+91</option>
+                    </select>
+                    <input class="form-control" placeholder="Phone number" type="text" formControlName="contact">
+                </div> <!-- form-group// -->
+
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input class="form-control" placeholder="Create password" type="password" formControlName="password">
+                </div> <!-- form-group// -->
+                {{regForm.valid}}
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" [disabled]=!regForm.valid type="submit" value="Register">
+                </div> <!-- form-group// -->
+                <p class="text-center">Have an account? <a routerLink="../login">Log In</a> </p>
+            </form>
+        </article>
+    </div> <!-- card.// -->
+
+</div>
